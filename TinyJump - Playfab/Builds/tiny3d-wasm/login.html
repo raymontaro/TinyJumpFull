@@ -1,0 +1,19 @@
+<script>
+function login(){
+  // (A) VARIABLES TO PASS
+  var user = document.getElementById("username").value;
+
+  // (B) URL PARAMETERS
+  var params = new URLSearchParams();
+  params.append("user", user);  
+
+  // (C) GO!
+  var url = "index.html?" + params.toString();
+  location.href = url;
+  // window.open(url);
+}
+</script>
+
+<input id="username" type="text" placeholder="Username">
+
+<input type="button" value="GO" onclick="login()"/>
